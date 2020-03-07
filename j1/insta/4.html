@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            height:70vh;
+            display: grid;
+            grid-gap: 10px;
+            grid-auto-rows: 100px;
+            grid-template-columns: repeat(5, 100px);
+						background-color: beige;
+                       place-content: center;
+
+
+
+                      
+        }
+
+        .box:first-child{
+display: flex;
+justify-content:center;
+align-items:center;
+        /* place-self: center; */
+        } 
+
+
+
+        .box:nth-child(even) { 
+        
+            background-color: lightblue;
+        }
+
+        .box:nth-child(odd) {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+
+
+
+
+    justify-content:center;
+    align-content:center;
+                        ==== place-content: center center; (수직 수평 순)
+
+
+
+
+                            justify-items: center;   모든 셀 내부 내용물을 중앙정렬해라.
+
+
+                            grif 속성값이 내용물이라 수평으로 쪼그라든것 
+
+
+
+
+
+
+
+
+
+
+
+                             justify-items: center;
+                        align-items: center;
+
+
+                 ==       place-items: center; end center start
+
+
+
+
+
+
+
+
+
+
+
+        .box:first-child{
+
+            justify-self: center;
+            align-self: center;
+        } 
+        => 너 혼자만 정렬해! ==place-self: center;
+
+
+
+</body>
+
+</html>
