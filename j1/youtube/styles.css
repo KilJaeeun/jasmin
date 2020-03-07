@@ -1,0 +1,125 @@
+:root {
+    --topNavColor: red;
+    --leftSideBarColor: yellow;
+    --advertisementColor: blue;
+    --contentsForYouColor: green;
+  }
+body{
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    display: grid;
+   
+        grid-template-areas: "topNav topNav"
+        "leftSideBar advertisement"
+        "leftSideBar contentsForYou  "
+        "leftSideBar contentsForYou ";
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 1fr 5fr 7fr ;
+    & div {
+        width: 100%;
+    }
+
+
+}
+
+.topNav {
+    background-color: var(--topNavColor);
+    grid-area:topNav;
+}
+.leftSideBar{
+    background-color: var(--leftSideBarColor);
+    grid-area:leftSideBar
+}
+.advertisement{
+    background-color: var(--advertisementColor);
+    grid-area:advertisement;
+}
+.contentsForYou{
+    background-color: var(--contentsForYouColor);
+    grid-area:contentsForYou;
+}
+@custom-media --xlarge-size ( max-width: 3000px);
+@custom-media --large-size ( max-width:  1330px);
+@custom-media --md-size ( max-width:  1187px);
+@custom-media --sm-size ( max-width:  808px);
+@custom-media --xsm-size ( max-width:  687px);
+
+@media(--xlarge-size){
+    body{
+        grid-template-areas: "topNav topNav"
+        "leftSideBar advertisement"
+        "leftSideBar contentsForYou  "
+        "leftSideBar contentsForYou ";
+        grid-template-columns: 240px 6fr;
+        grid-template-rows: 1fr 5fr 7fr ;
+    }
+
+}
+
+@media(--large-size){
+
+    body{
+        grid-template-areas: "topNav topNav"
+        "leftSideBar advertisement"
+        "leftSideBar contentsForYou  "
+        "leftSideBar contentsForYou ";
+        grid-template-columns: 72px 10fr;
+        grid-template-rows: 1fr 5fr 7fr ;
+    }
+
+}
+
+
+
+
+@media(--md-size){
+    body{
+        grid-template-areas: "topNav "
+        " advertisement"
+        " contentsForYou  "
+        " contentsForYou ";
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 5fr 7fr ;
+    }
+
+    body>div{
+        width: 100vw;
+    }
+
+}
+
+
+
+
+@media(--sm-size){
+    body{
+        grid-template-areas: "topNav"
+        "advertisement"
+        "contentsForYou"
+        "contentsForYou";
+        grid-template-columns: 1fr   ;
+        grid-template-rows: 1fr 4fr 6fr ;
+    }
+    body>div{
+        width: 100vw;
+    }
+}
+@media(--xsm-size){ 
+    body{
+        grid-template-areas: "topNav"
+        "advertisement"
+        "contentsForYou  "
+        " contentsForYou ";
+       
+       
+        grid-template-rows: 1fr 4fr 6fr; 
+        /* //height */
+
+
+
+    }
+    body>div{
+        width: 100vw;
+    }
+}

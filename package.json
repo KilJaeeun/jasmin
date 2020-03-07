@@ -1,0 +1,34 @@
+{
+  "name": "jasmin",
+  "version": "1.0.0",
+  "description": "자스민입니다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KilJaeeun/jasmin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KilJaeeun/jasmin/issues"
+  },
+  "homepage": "https://github.com/KilJaeeun/jasmin#readme",
+  "dependencies": {
+    "postcss-preset-env": "^6.7.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 0
+      }
+    }
+  }
+
+
+
+
+}
