@@ -1,0 +1,42 @@
+@custom-selector :--headers h1, h2, h3, h4, h5, h6;
+
+
+@custom-media --ipad-size (750px < width <= 850px );
+@custom-media --com-size (min-width: 850px );
+@media(--ipad-size){
+    body{
+        background-color: blueviolet;
+    
+    & :--headers {
+        margin-block: 0;
+        color: green;
+      }
+    
+    
+    }
+    
+}
+
+@media(--com-size){
+    body{
+        background-color: pink;
+    }
+    :--headers {
+        margin-block: 0;
+        color: red;
+      }
+}
+
+
+:--headers:hover{
+transform: scale(1.07);
+
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

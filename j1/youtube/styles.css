@@ -4,6 +4,20 @@
     --advertisementColor: blue;
     --contentsForYouColor: green;
   }
+
+ 
+.movie{
+   
+}
+  *{text-overflow:ellipsis; 
+    white-space: nowrap;overflow: hidden;
+  }
+
+  .searchBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 body{
     margin: 0;
     height: 100vh;
@@ -15,17 +29,81 @@ body{
         "leftSideBar contentsForYou  "
         "leftSideBar contentsForYou ";
         grid-template-columns: 1fr 6fr;
-        grid-template-rows: 1fr 5fr 7fr ;
+        grid-template-rows: 56px 60px 7fr ;
     & div {
         width: 100%;
+      
+    }
+    
+
+}
+
+
+.leftSideBar {
+    display: grid;
+    grid-template-rows: 40px;   
+    grid-auto-rows: 40px;
+}
+.left {
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    
+    line-break: unset;
+}
+
+
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    
+    & .left{
+        width: 130px;
+        background-color: lightyellow;
+        display: flex;
+        align-items: center;
+        & .hamburger {
+            width: 40px;
+            height: 40px;display: flex;
+            align-items: center;
+            background-color: pink;
+        }
+
+        & .logo{
+            width: 80px;
+            height: 24px;display: flex;
+            align-items: center;
+            text-align: center;
+            background-color: pink;
+        }
+    }
+   
+    & .right {
+        width: 204px;
+        background-color: lightgoldenrodyellow;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        & .right_box{
+            background-color: blue;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
     }
 
 
 }
 
+
+
 .topNav {
     background-color: var(--topNavColor);
     grid-area:topNav;
+    height: 56px;
 }
 .leftSideBar{
     background-color: var(--leftSideBarColor);
@@ -34,12 +112,14 @@ body{
 .advertisement{
     background-color: var(--advertisementColor);
     grid-area:advertisement;
+    color: white;
 }
 .contentsForYou{
     background-color: var(--contentsForYouColor);
     grid-area:contentsForYou;
+  height: calc(100vh - 80px);
 }
-@custom-media --xlarge-size ( max-width: 3000px);
+@custom-media --xlarge-size (max-width:13030px);
 @custom-media --large-size ( max-width:  1330px);
 @custom-media --md-size ( max-width:  1187px);
 @custom-media --sm-size ( max-width:  808px);
@@ -47,12 +127,47 @@ body{
 
 @media(--xlarge-size){
     body{
+        & .searchBox{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                width: 50vw;
+                & *{
+                    height: 24px; 
+                }
+                
+            }
+
+
+
         grid-template-areas: "topNav topNav"
         "leftSideBar advertisement"
         "leftSideBar contentsForYou  "
         "leftSideBar contentsForYou ";
         grid-template-columns: 240px 6fr;
-        grid-template-rows: 1fr 5fr 7fr ;
+        grid-template-rows: 56px 60px 7fr ;
+    }
+
+
+    
+     .contentsForYou {
+        display: grid;
+        grid-gap: 10px;
+        grid-auto-rows: 235px;
+        grid-template-columns: repeat(4, 1fr);
+    
+    
+        & .movie{
+          
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 5em;
+        
+        }
     }
 
 }
@@ -65,7 +180,27 @@ body{
         "leftSideBar contentsForYou  "
         "leftSideBar contentsForYou ";
         grid-template-columns: 72px 10fr;
-        grid-template-rows: 1fr 5fr 7fr ;
+        grid-template-rows: 56px  60px 7fr ;
+
+
+        & .contentsForYou {
+            display: grid;
+            grid-gap: 10px;
+            grid-auto-rows: 235px;
+            grid-template-columns: repeat(4, 1fr);
+        
+        
+            & .movie{
+                background-color: black;
+                color: white;
+              display: flex;
+            justify-content: center;
+            justify-content: center;
+            
+            }
+        }
+        
+        
     }
 
 }
@@ -76,17 +211,34 @@ body{
 @media(--md-size){
     body{
         grid-template-areas: "topNav "
-        " advertisement"
-        " contentsForYou  "
-        " contentsForYou ";
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 5fr 7fr ;
-    }
+        " leftSideBar  advertisement"
+        "  leftSideBar  contentsForYou  "
+        " leftSideBar  contentsForYou ";
+        grid-template-columns: 72px 6fr ;
+        grid-template-rows: 56px  60px 7fr ;
+        }
 
     body>div{
         width: 100vw;
     }
 
+
+    .contentsForYou{
+        display: grid;
+        grid-gap: 10px;
+        grid-auto-rows: 235px;
+        grid-template-columns:  repeat(auto-fit, minmax(30%, 1fr));
+    
+     
+    }
+    .movie{
+        background-color: black;
+        color: white;
+      display: flex;
+    justify-content: center;
+    justify-content: center;
+    
+    }
 }
 
 
@@ -94,18 +246,47 @@ body{
 
 @media(--sm-size){
     body{
+display: grid;
+
+
         grid-template-areas: "topNav"
         "advertisement"
         "contentsForYou"
         "contentsForYou";
         grid-template-columns: 1fr   ;
-        grid-template-rows: 1fr 4fr 6fr ;
+        grid-template-rows: 56px  60px 6fr ;
+
+
+
+        & .contentsForYou{
+            display: grid;
+            grid-gap: 10px;
+            grid-auto-rows: 235px;
+            grid-template-columns: repeat(2, 1fr);
+        
+        
+            & .movie{
+                background-color: black;
+                color: white;
+              display: flex;
+            justify-content: center;
+            justify-content: center;
+            
+            }
+        }
+        
+        
+        
     }
     body>div{
         width: 100vw;
     }
 }
+
+
+
 @media(--xsm-size){ 
+
     body{
         grid-template-areas: "topNav"
         "advertisement"
@@ -113,13 +294,34 @@ body{
         " contentsForYou ";
        
        
-        grid-template-rows: 1fr 4fr 6fr; 
-        /* //height */
-
-
-
+        grid-template-rows: 56px 60px 6fr; 
     }
+  
+        /* //height */
+        .contentsForYou{
+            display: grid;
+            grid-gap: 10px;
+            grid-auto-rows: 235px;
+            grid-template-columns: repeat(1, 1fr)!important;
+        }
+        
+          .movie{
+                background-color: black;
+                color: white;
+              display: flex;
+            justify-content: center;
+            justify-content: center;
+            
+            }
+      
+
+
+
+   
     body>div{
         width: 100vw;
+    }
+    .searchBox {
+        display: none!important;
     }
 }

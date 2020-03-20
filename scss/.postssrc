@@ -1,0 +1,7 @@
+/* parcel_app/.postcssrc */
+
+{
+  "plugins": {
+    "autoprefixer": true
+  }
+}

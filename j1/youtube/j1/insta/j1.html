@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      display: grid; 
+	  grid-template-rows: 300px 120px;   
+      grid-template-columns: 300px 500px;
+      grid-auto-flow:column;
+      grid-gap: 10px 30px; 
+    }
+
+    .box {
+      background-color: #42b883;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:white;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+   <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+
+
+
+    .father {
+      display: grid; 
+       {% comment %} //그리드 먹인 부분이 그리드 컨테이너 ,cell 가진다.  {% endcomment %}
+	  grid-template-rows: 300px 120px;   
+       {% comment %} //row 2개고 300 120 이다. {% endcomment %}
+      grid-template-columns: 300px 500px;
+      {% comment %} //column 2개고 300 500 이다. {% endcomment %}
+      grid-gap: 10px;   -- 위아래,  양옆
+      {% comment %} //격자 사이 갭 {% endcomment %}
+      grid-auto-rows:  그리드 만들면 추가된 객체에 대해서 row 방향으로 쭉쭉 늘리는데 크기를 이렇게 해라.box
+         grid-auto-columns
+
+
+         grid-auto-flow:column //=== flex-direction
+    }
+
+
+
+  .comment  
+
+
+</body>
+</html>
