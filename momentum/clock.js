@@ -1,17 +1,21 @@
 const clockContainer = document.querySelector(".js-clock"),
     clockTitle = clockContainer.querySelector("h1");
 
+/* getTime: time 을 얻어서 html 에 적용 */
 function getTime() {
     const date = new Date();
     const minutes = date.getMinutes();
     const hours = date.getHours();
     const seconds = date.getSeconds();
-
-    clockTitle.innerText = `${hours}:${minutes}:${seconds}`;
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  }:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
+/* getTime end */
 
 function init() {
-    getTime();
+  getTime();
+  setInterval(getTime, 1000);
 }
 
 init();
