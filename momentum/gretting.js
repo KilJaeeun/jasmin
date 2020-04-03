@@ -4,8 +4,23 @@ const form = document.querySelector(".js-form"),
 
 const USER_LS = "currentUSer",
     SHOWING_CN = "showing";
-/* paint greeting start*/
 
+/* handle Submit  start*/
+function handleSubmit(event) {
+    event.preventDefalt();
+    const currentValue = input.value;
+    console.log(currentValue);
+}
+/* handle Submit  end*/
+
+/* ask for name  start*/
+function askForName() {
+    form.classList.add(SHOWING_CN);
+    form.addEventListener("submit", handleSubmit);
+}
+/* ask for name  end*/
+
+/* paint greeting start*/
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
@@ -18,6 +33,7 @@ function loadName() {
     const currentUSer = localStorage.getItem(USER_LS);
     if (currentUSer == null) {
         //person is not
+        askForName();
         console.log("current user is empty");
     } else {
         //person is
