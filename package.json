@@ -1,42 +1,48 @@
 {
-  "name": "jasmin",
-  "version": "1.0.0",
-  "description": "자스민입니다",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KilJaeeun/jasmin.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KilJaeeun/jasmin/issues"
-  },
-  "homepage": "https://github.com/KilJaeeun/jasmin#readme",
-  "dependencies": {
-    "autoprefixer": "^9.7.4",
-    "babel-preset-env": "^1.7.0",
-    "node-sass": "^4.13.1",
-    "postcss-preset-env": "^6.7.0"
-  },
-  "postcss": {
-    "plugins": {
-      "postcss-preset-env": {
-        "stage": 0
-      },
-      "autoprefixer": {
-        "overrideBrowserslist": [
-          "> 1%",
-          "last 4 versions"
-        ]
-      }
-    }
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3"
-  }
+    "name": "jasmin",
+    "version": "1.0.0",
+    "description": "자스민입니다",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KilJaeeun/jasmin.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KilJaeeun/jasmin/issues"
+    },
+    "homepage": "https://github.com/KilJaeeun/jasmin#readme",
+    "dependencies": {
+        "autoprefixer": "^9.7.4",
+        "axios": "^0.19.2",
+        "babel-preset-env": "^1.7.0",
+        "node-sass": "^4.13.1",
+        "postcss-preset-env": "^6.7.0",
+        "prop-types": "^15.7.2",
+        "styled-components": "^5.1.0",
+        "styled-reset": "^4.1.4"
+    },
+    "postcss": {
+        "plugins": {
+            "postcss-preset-env": {
+                "stage": 0
+            },
+            "autoprefixer": {
+                "overrideBrowserslist": [
+                    "> 1%",
+                    "last 4 versions"
+                ]
+            }
+        }
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3"
+    },
+    "typescript.format.enable": false,
+    "prettier.tslintIntegration": true
 }
