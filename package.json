@@ -21,7 +21,7 @@
         "autoprefixer": "^9.7.4",
         "axios": "^0.19.2",
         "babel-preset-env": "^1.7.0",
-        "node-sass": "^4.13.1",
+        "node-sass": "^7.0.0",
         "postcss-preset-env": "^6.7.0",
         "prop-types": "^15.7.2",
         "styled-components": "^5.1.0",
